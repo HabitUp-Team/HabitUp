@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { SiWolfram } from 'react-icons/si';
 
 const Header=()=>{
-  return(  <ReactBootstrap.Navbar bg="light" expand="lg">
+  return(  <ReactBootstrap.Navbar style={{backgroundColor:"#e8eef2"}} expand="lg">
   <ReactBootstrap.Container>
     <ReactBootstrap.Navbar.Brand href="#home"><SiWolfram /> <strong>HabitUp</strong></ReactBootstrap.Navbar.Brand>
     <ReactBootstrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
