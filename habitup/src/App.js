@@ -1,22 +1,25 @@
 import React, {useState, useEffect} from "react";
 import Header from "./components/header";
+import Todo from "./components/todo"
 import HashLoader from "react-spinners/HashLoader";
-import {Initialise} from "./styles/initialise"
+import {Initialise} from "./styles/initialise";
 
 function App() {
   // Setting up the intial loader
   const [loader, setLoader] = useState(false);
   useEffect(() => {
     setLoader(true);
-    setTimeout(() => setLoader(false), 3000)
+    setTimeout(() => setLoader(false), 1500)
   }, []);
 
 
   return (
     <div className="App">
-      {/* condition for loading screen      */}
-      { loader?<Initialise><HashLoader color={"#B8E986"} loading={loader} size={150} /></Initialise>:
-    <Header/>}
+    {loader?<Initialise><HashLoader color={"#8BFF0E"} size={150} /></Initialise>:
+    <>
+    <Header/>
+    <Todo/>
+    </>}
   </div>);
 }
 
