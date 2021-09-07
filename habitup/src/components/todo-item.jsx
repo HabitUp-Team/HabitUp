@@ -4,10 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { CCallout } from '@coreui/react';
 
-const TodoItem =(props)=>{
+const TodoItem =()=>{
   return(
-    <CCallout color="primary" style={{color:"#FFFFFF"}}>
-{props.data}
+    <CCallout color="danger" style={{color:"#FFFFFF"}}>
+{/*props.data*/} dj fskd fksjd f
 </CCallout>
   );
 

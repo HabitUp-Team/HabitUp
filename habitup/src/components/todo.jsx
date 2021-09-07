@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import { TodoStyles } from "../styles/TodoStyles";
 import { H3 } from "../styles/heading-three";
 import TodoItem from "./todo-item";
@@ -6,7 +6,7 @@ import * as B from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Todo = () => {
-  const [TempData,setTemp]=useState("");
+  {/*const [TempData,setTemp]=useState("");
   const [ListItem,setItem] = useState({
     key: "",
     content: ""
@@ -21,7 +21,7 @@ return {...prevNotes,[content]:TempData};
   }
   const CreateCallout=(props)=>{
   return(<TodoItem data={props.data} />);
-  }
+  } */}
   return (
     <TodoStyles>
       <H3>Todo List</H3>
@@ -30,7 +30,7 @@ return {...prevNotes,[content]:TempData};
           placeholder="Add Tasks"
           aria-label="Add Tasks"
           aria-describedby="basic-addon2"
-          onChange={ReceiveItem}
+
           value=""
         />
 
@@ -40,7 +40,7 @@ return {...prevNotes,[content]:TempData};
           id="segmented-button-dropdown-2"
           alignRight
           align="end"
-          onClick={ListUpdater}
+
         >
           <B.Dropdown.Item href="#">+</B.Dropdown.Item>
           <B.Dropdown.Item href="#">-</B.Dropdown.Item>
@@ -49,7 +49,9 @@ return {...prevNotes,[content]:TempData};
 
         </B.SplitButton>
       </B.InputGroup>
-             {ListItem.map(CreateCallout)}
+      <TodoItem />
+      <TodoItem />
+      {/*ListItem.map(CreateCallout)*/}
     </TodoStyles>
 
 

@@ -14,7 +14,7 @@ const Header = () => {
       <ReactBootstrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
       <ReactBootstrap.Navbar.Collapse id="basic-navbar-nav">
         <ReactBootstrap.Nav className="me-auto">
-          <ReactBootstrap.Nav.Link href="/home">Home</ReactBootstrap.Nav.Link>
+          <ReactBootstrap.Nav.Link href="/">Home</ReactBootstrap.Nav.Link>
           <ReactBootstrap.Nav.Link href="/todo-list">Todo List</ReactBootstrap.Nav.Link>
 
         </ReactBootstrap.Nav>
