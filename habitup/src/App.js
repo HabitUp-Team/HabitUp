@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/header";
 import Todo from "./components/todo"
+import Authentication from "./Authentication";
 import HashLoader from "react-spinners/HashLoader";
 import { Initialise } from "./styles/initialise";
 import {
@@ -27,7 +28,7 @@ function App() {
             <Header />
             <Switch>
               <Route exact path="/">
-
+                <Authentication />
               </Route>
               <Route path="/todo-list">
                 <Todo />
