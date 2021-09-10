@@ -1,6 +1,4 @@
-body{
-    background-image: url("cool-background.png");
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
+body {
+  background-color: #66ff66;
+  background-image: url("bg.png");
 }
