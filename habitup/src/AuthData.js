@@ -1,17 +1,17 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+// eslint-disable-next-line
 import Firebase from "./FirebaseConfig";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-const AuthData = () => {
-    const [name,setName]=useState("");
+export const Username = () => {
+    const [name, setName] = useState("");
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            setName(user.displayName+"'s");
+            setName(user.displayName + "'s");
         }
     });
-    
+
     return (<span>{name}</span>);
 }
 
-export default AuthData;
