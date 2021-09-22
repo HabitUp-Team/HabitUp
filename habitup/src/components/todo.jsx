@@ -7,6 +7,7 @@ import { Username } from "../AuthData";
 import { Button, FormControl } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup'
 import "bootstrap/dist/css/bootstrap.min.css";
+import firebase from "../FirebaseConfig";
 
 const Todo = () => {
   const [Records, setRecords] = useState([]);
@@ -30,13 +31,19 @@ const Todo = () => {
       impactSign: "",
       id: ""
     });
+    {/*databaseFirebase();*/ }
   }
 
-
+  {/* const databaseFirebase = () => {
+    const todoRef = firebase.database().ref('Todo');
+    todoRef.push(Records);
+  } */}
 
   return (
     <TodoStyles>
-      <H3><Username /> Todo List</H3>
+      <H3>
+        {/* <Username /> */}
+        Todo List</H3>
       <form onSubmit={handleSubmit}>
         <InputGroup>
           <FormControl
@@ -51,9 +58,9 @@ const Todo = () => {
 
 
           />
-          <Button variant="outline-light" name="impactSign" id="impactSign" value="+" onClick={handleChange}>+</Button>
-          <Button variant="outline-light" name="impactSign" id="impactSign" value="-" onClick={handleChange}>-</Button>
-          <Button variant="outline-light" name="impactSign" id="impactSign" value="=" onClick={handleChange}>=</Button>
+          <Button variant="outline-light" name="impactSign" id="impactSign" value="+" onClick={handleChange}>Positive</Button>
+          <Button variant="outline-light" name="impactSign" id="impactSign" value="-" onClick={handleChange}>Negativ</Button>
+          <Button variant="outline-light" name="impactSign" id="impactSign" value="=" onClick={handleChange}>Postive</Button>
           <Button variant="outline-light" type="submit">Add</Button>
 
         </InputGroup>

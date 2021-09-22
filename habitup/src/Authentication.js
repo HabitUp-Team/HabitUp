@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // eslint-disable-next-line
-import Firebase from "./FirebaseConfig";
+import firebase from "./FirebaseConfig";
 import LoginLogout from "./components/LoginLogout";
 import { getAuth, signOut, signInWithPopup, onAuthStateChanged, GoogleAuthProvider } from "firebase/auth";
 const provider = new GoogleAuthProvider();

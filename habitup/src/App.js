@@ -28,7 +28,7 @@ function App() {
             <Header />
             <Switch>
               <Route exact path="/">
-                <Authentication />
+                {/* <Authentication /> */}
               </Route>
               <Route path="/todo-list">
                 <Todo />
