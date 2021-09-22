@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/header";
 import Todo from "./components/todo"
+import Tasker from "./components/Tasker";
 import Authentication from "./Authentication";
 import HashLoader from "react-spinners/HashLoader";
 import { Initialise } from "./styles/initialise";
@@ -33,8 +34,8 @@ function App() {
               <Route path="/todo-list">
                 <Todo />
               </Route>
-              <Route path="/dashboard">
-
+              <Route path="/tasker">
+                <Tasker />
               </Route>
             </Switch>
           </Router>

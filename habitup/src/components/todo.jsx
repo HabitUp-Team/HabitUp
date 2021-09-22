@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
-import { TodoStyles } from "../styles/TodoStyles";
+import { PaddingStyles } from "../styles/PaddingStyles";
 import { H3 } from "../styles/heading-three";
 import TodoItem from "./todo-item";
 import { Username } from "../AuthData";
@@ -40,7 +40,7 @@ const Todo = () => {
   } */}
 
   return (
-    <TodoStyles>
+    <PaddingStyles>
       <H3>
         {/* <Username /> */}
         Todo List</H3>
@@ -68,7 +68,7 @@ const Todo = () => {
       {Records.map((props) =>
         <TodoItem todoTask={props.todoTask} impactSign={props.impactSign} key={props.id} />
       )}
-    </TodoStyles>
+    </PaddingStyles>
 
 
   );

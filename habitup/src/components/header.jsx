@@ -16,6 +16,7 @@ const Header = () => {
         <ReactBootstrap.Nav className="me-auto">
           <ReactBootstrap.Nav.Link href="/">Login</ReactBootstrap.Nav.Link>
           <ReactBootstrap.Nav.Link href="/todo-list">Todo List</ReactBootstrap.Nav.Link>
+          <ReactBootstrap.Nav.Link href="/tasker">Tasker</ReactBootstrap.Nav.Link>
 
         </ReactBootstrap.Nav>
       </ReactBootstrap.Navbar.Collapse>

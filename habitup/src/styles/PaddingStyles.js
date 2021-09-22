@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const TodoStyles = styled.div`
+export const PaddingStyles = styled.div`
 padding: 3% 10%;
 `;
