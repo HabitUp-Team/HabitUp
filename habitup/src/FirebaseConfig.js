@@ -1,4 +1,4 @@
-import * as fb from "firebase/app";
+import firebase from 'firebase/compat/app';
 require('dotenv').config();
 
 const firebaseConfig = {
@@ -11,7 +11,6 @@ const firebaseConfig = {
     measurementId: "G-MCZ2X8MTES"
 };
 
-// Initialize Firebase
-const app = fb.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-export default app;
+export default firebase;
