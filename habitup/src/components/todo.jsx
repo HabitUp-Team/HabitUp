@@ -31,19 +31,14 @@ const Todo = () => {
       impactSign: "",
       id: ""
     });
-    {/*databaseFirebase();*/ }
-  }
 
-  {/* const databaseFirebase = () => {
-    const todoRef = firebase.database().ref('Todo');
-    todoRef.push(Records);
-  } */}
+  }
+  const ref = firebase.firestore().collection("Todo");
+  console.log(ref);
 
   return (
     <PaddingStyles>
-      <H3>
-        {/* <Username /> */}
-        Todo List</H3>
+      <H3> <Username /> Todo List</H3>
       <form onSubmit={handleSubmit}>
         <InputGroup>
           <FormControl

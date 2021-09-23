@@ -51,5 +51,8 @@
     ]
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "firestore-export-import": "^0.17.0"
+  }
 }
