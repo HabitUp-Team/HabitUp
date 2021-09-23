@@ -5,6 +5,7 @@ import Tasker from "./components/Tasker";
 import Authentication from "./Authentication";
 import HashLoader from "react-spinners/HashLoader";
 import { Initialise } from "./styles/initialise";
+import 'firebase/firestore';
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,7 +30,7 @@ function App() {
             <Header />
             <Switch>
               <Route exact path="/">
-                {/* <Authentication /> */}
+                <Authentication />
               </Route>
               <Route path="/todo-list">
                 <Todo />
