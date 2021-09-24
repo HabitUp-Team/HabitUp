@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { PaddingStyles } from "../styles/PaddingStyles";
 import { H3 } from "../styles/heading-three";
@@ -8,7 +8,7 @@ import { Button, FormControl } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup'
 import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "../FirebaseConfig";
-import gettingTodoList from "../Database";
+import {gettingTodoList,settingTodoList} from "../Database";
 
 const Todo = () => {
 
@@ -28,6 +28,7 @@ const Todo = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setRecords([...Records, todoItem]);
+    // settingTodoList(todoItem);
     setodoItem({
       todoTask: "",
       impactSign: "",
@@ -35,8 +36,12 @@ const Todo = () => {
     });
 
   }
-  gettingTodoList().then((e) => setRecords(e));
-
+  useEffect(() => {
+    gettingTodoList().then((e) => setRecords(e))
+  }, []);
+   
+const ref = firebase.firestore().collection("habitup");
+console.log(ref);
 
   return (
 
