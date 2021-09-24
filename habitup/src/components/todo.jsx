@@ -32,16 +32,14 @@ const Todo = () => {
       impactSign: "",
       id: "",
     });
-  };
+
+  }
   const ref = firebase.firestore().collection("Todo");
   console.log(ref);
 
   return (
     <PaddingStyles>
-      <H3>
-        {" "}
-        <Username /> Todo List
-      </H3>
+      <H3> <Username /> Todo List</H3>
       <form onSubmit={handleSubmit}>
         <InputGroup>
           <FormControl
