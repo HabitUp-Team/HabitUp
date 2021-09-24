@@ -8,6 +8,7 @@ import { Button, FormControl } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup'
 import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "../FirebaseConfig";
+import 'firebase/compat/firestore';
 
 const Todo = () => {
   const [Records, setRecords] = useState([]);

@@ -1,5 +1,5 @@
-import * as firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 require('dotenv').config();
 
 const firebaseConfig = {
