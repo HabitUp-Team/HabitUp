@@ -8,9 +8,10 @@ import { Button, FormControl } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup'
 import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "../FirebaseConfig";
-import 'firebase/compat/firestore';
+import gettingTodoList from "../Database";
 
 const Todo = () => {
+
   const [Records, setRecords] = useState([]);
   const [todoItem, setodoItem] = useState({
     todoTask: "",
@@ -34,10 +35,11 @@ const Todo = () => {
     });
 
   }
-  const ref = firebase.firestore().collection("Todo");
-  console.log(ref);
+  gettingTodoList().then((e) => setRecords(e));
+
 
   return (
+
     <PaddingStyles>
       <H3> <Username /> Todo List</H3>
       <form onSubmit={handleSubmit}>
