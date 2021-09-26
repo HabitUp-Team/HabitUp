@@ -28,7 +28,7 @@ const Todo = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setRecords([...Records, todoItem]);
-    // settingTodoList(todoItem);
+    settingTodoList(todoItem);
     setodoItem({
       todoTask: "",
       impactSign: "",
