@@ -6,7 +6,7 @@ import TaskerItem from "./tasker-item";
 import Button from "react-bootstrap/Button";
 import Input from "@mui/material/Input";
 import { CCallout } from "@coreui/react";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const Tasker = () => {
   const [TaskerRecord, setTaskerRecord] = useState([]);
@@ -14,7 +14,7 @@ const Tasker = () => {
     taskerTask: "",
     taskerLocation: "",
     taskerTime: "",
-    id: uuidv4()
+    id: uuidv4(),
   });
   const handleChange = (e) => {
     const name = e.target.name;
@@ -25,6 +25,12 @@ const Tasker = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     setTaskerRecord([...TaskerRecord, Tasker]);
+    setTasker({
+      taskerTask: "",
+      taskerLocation: "",
+      taskerTime: "",
+      id: "",
+    });
   };
   return (
     <PaddingStyles>
@@ -35,6 +41,7 @@ const Tasker = () => {
             I want to{" "}
             <Input
               placeholder="Add Task here"
+              autoComplete="off"
               id="taskerTask"
               name="taskerTask"
               value={Tasker.taskerTask}
@@ -43,13 +50,22 @@ const Tasker = () => {
             at/in{" "}
             <Input
               placeholder="Add Location"
+              autoComplete="off"
               id="taskerLocation"
-               name="taskerLocation"
+              name="taskerLocation"
               value={Tasker.taskerLocation}
               onChange={handleChange}
             />{" "}
             at{" "}
-            <Input placeholder="Time" id="taskerTime" name="taskerTime" value={Tasker.taskerTime} onChange={handleChange} />
+            <Input
+              placeholder="Time"
+              autoComplete="off"
+              id="taskerTime"
+              name="taskerTime"
+              value={Tasker.taskerTime}
+              type="time"
+              onChange={handleChange}
+            />
             <Button variant="light" type="submit" onClick={onSubmit}>
               Add
             </Button>
